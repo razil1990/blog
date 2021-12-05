@@ -11,6 +11,13 @@
   </head>
 
   <body>
-    <%= yield %>
+   
+      <% flash.each do |k,v| %>
+        <div>
+          <%= tag.div v, role: 'alert' %>
+        </div>    
+      <% end %>
+
+      <%= yield %>
   </body>
 </html>
