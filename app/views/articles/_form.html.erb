@@ -1,0 +1,14 @@
+<%= form_with model: @article do |article| %>
+
+  <div>
+    <%= article.label :title %>
+    <%= article.text_field :title %>
+  </div>
+
+  <div>
+    <%= article.label :text %>
+    <%= article.text_area :text %>
+  </div>
+
+  <%= article.submit "#{params[:action].capitalize} article" %>
+<% end %>
